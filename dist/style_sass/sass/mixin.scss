@@ -1,0 +1,53 @@
+@mixin x-font-family{
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+$font-white:white;
+$font-black:black;
+
+@mixin allkeys-style($bd,$bs){
+    float: left;
+    position: relative;
+    top: 0;
+    margin: 0 7px 11px 0;
+    text-align: center;
+    line-height: 36px;
+    color: font-black;
+    cursor:pointer;
+    width: 66px;
+    height: 36px;
+
+    background: $bd;
+    @include box-shadow($bs);
+    @include border-radius(8px);
+    @include user-select(none);
+    @include transition(all 0.2s ease);
+}
+
+@mixin screen-style($bd,$bs,$ts){
+    height: 40px;
+	width: 212px;
+    float: right;
+    padding: 0 10px;
+
+    border-radius: 3px;
+    background: $bd;
+    @include box-shadow($bs);
+
+    font-size: 17px;
+	line-height: 40px;
+	color: $font-white;
+	text-shadow:$ts;
+	text-align: right;
+	letter-spacing: 1px;
+}
+
+@mixin x-hover($bd,$bs,$tc){
+    background:$bd;
+    @include box-shadow($bs);
+    color:$tc;
+}
+@mixin x-active($bs){
+    top: 4px;
+    @include box-shadow($bs);
+}

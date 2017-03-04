@@ -1,0 +1,165 @@
+
+
+
+@import "compass/reset";
+@import "compass/css3";
+@import "mixin";
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+/*全局背景线性渐变*/
+html{
+    @include x-font-family;
+    height: 100%;
+    background: white;
+    @include background(radial-gradient(circle,#fff 20%,#ccc));
+    background-size: cover;
+}
+
+/*实现计算器按钮3D效果*/
+#calculator{
+    width: 325px;
+    height: auto;
+    margin: 100px auto;
+    padding: 20px 20px 9px;
+
+    background: #9dd2ea;
+    @include background(linear-gradient(#9dd2ea, #8bceec));
+    @include border-radius(5px);
+    @include box-shadow(0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2));//两层shadow
+}
+
+/*key布局*/
+
+/* Clear floats */
+.keyboard, .top {overflow: hidden;}
+
+.top{
+    span.clear{
+        color: $font-white;
+        background: #ff9fa8;
+        @include allkeys-style(#ff9fa8,0px 4px #ff7c87);
+        &:hover{
+            @include x-hover(#f68991,0px 4px #d3545d,$font-white);
+        }
+        &:active{
+            @include x-active(0px 0px #d3545d);
+        }
+    }
+    .screen{
+        @include screen-style(rgba(0, 0, 0, 0.2),
+                                inset 0px 4px rgba(0, 0, 0, 0.2),
+                                1px 1px 2px rgba(0, 0, 0, 0.2));
+    }
+}
+
+.keyboard{
+    span{
+        @include allkeys-style(#ffffff,0 4px rgba(0,0,0,0.2));
+        &:hover{
+            @include x-hover(#9c89f6,0px 4px #6b54d3,$font-white);
+        }
+        &:active{
+            @include x-active(0px 0px #6b54d3);
+        }
+    }
+    span.operator{
+        background: #df9464;
+	    margin-right: 0;
+        &:hover{
+            @include x-hover(#c99979,0px 4px #b7704f,$font-white);
+        }
+        &:active{
+            @include x-active(0px 0px #b7704f);
+        }
+    }
+    span.eval{
+        color: #888e5f;
+        background: #f1ff92;
+        @include box-shadow(0 4px #9da853);
+        &:hover{
+            @include x-hover(#abb850,0px 4px #717a33,$font-white);
+        }
+        &:active{
+            @include x-active(0px 0px #717a33);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
